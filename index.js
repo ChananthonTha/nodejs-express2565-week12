@@ -13,16 +13,16 @@ app.get('/',(req,res)=>{
 })
 
 //Get:http://localhost:5000/user
-app.get('/user',()=>{
+app.get('/user',(req,res)=>{
     console.log("User Page")
     res.send("User Page")
 })
 
 //Get:http://localhost:5000/contact
-app.arguments('/contact',()=>{
+app.get('/contact',(req,res)=>{
     res.send("Contact Page")
 })
 
 server.listen(PORT,()=>{
-    console.log(`Sever running at http://${hostname}:${PORT}`)
+    console.log(`Server running at http://${hostname}:${PORT}`)
 })
